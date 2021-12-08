@@ -6,4 +6,4 @@ Chrome extension to guess Zillow's Zestimate prices
 ## :file_folder: Code Structure
 The code is broken up as follows:
 
-- `manifest.json`: Tells Chrome everything it needs to know to properly load up the extension in Chrome
+- `manifest.json`: Tells Chrome everything it needs to know to properly load up the extension

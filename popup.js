@@ -13,5 +13,16 @@ changeColor.addEventListener("click", async () => {
 function setPageBackgroundColor() {
   chrome.storage.sync.get("color", ({ color }) => {
     document.body.style.backgroundColor = color;
+    // document.body.innerHTML = "Hello";  // Modify whole page
+    document.getElementsByClassName("sc-jJoQJp bhImaV") = "Test";  // Try to remove element on Zillow
   });
 }
+
+// When the button is hovered, inject change color of the button to the color variable for the page
+changeColor.addEventListener("mouseenter", async () => {
+  chrome.storage.sync.get("color", ({ color }) => {
+    var sheet = document.createElement('style');
+    sheet.innerHTML = `button:hover {background: ${color};}`;
+    document.body.appendChild(sheet);
+  });
+});
